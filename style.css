@@ -21,6 +21,10 @@ body {
   margin: 20px 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .image {
   width: 200px;
   height: 200px;
