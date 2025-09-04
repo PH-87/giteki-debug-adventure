@@ -2,12 +2,58 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>기텍이의 디버깅 대모험</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>기텍이의 디버깅 대모험</h1>
-  <button onclick="startGame()">게임 시작</button>
+  <!-- 시작 화면 -->
+  <section id="start-screen" class="screen active">
+    <h1>기텍이의 디버깅 대모험</h1>
+    <button onclick="showScreen('game-screen')">게임 시작</button>
+    <button onclick="showScreen('howto-screen')">게임 방법</button>
+  </section>
+
+  <!-- 방법 화면 -->
+  <section id="howto-screen" class="screen">
+    <h2>게임 방법</h2>
+    <p>60초 안에 오류를 찾아 기텍이를 도와주세요!</p>
+    <button onclick="showScreen('game-screen')">게임 시작</button>
+  </section>
+
+  <!-- 게임 화면 -->
+  <section id="game-screen" class="screen">
+    <h2>Stage 1</h2>
+    <div class="game-area">
+      <div class="image normal">정상 이미지</div>
+      <div class="image error">오류 이미지</div>
+    </div>
+    <div class="hud">
+      <span>남은 시간: 60</span>
+      <span>정답: 0/5</span>
+      <button onclick="showHint()">힌트</button>
+    </div>
+  </section>
+
+  <!-- 힌트 모달 -->
+  <div id="hint-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>예시 힌트: Error: Value out of range</p>
+      <button onclick="closeHint()">닫기</button>
+    </div>
+  </div>
+
+  <!-- 단계 클리어 화면 -->
+  <section id="stage-clear" class="screen">
+    <h2>Stage Clear!</h2>
+    <button onclick="showScreen('game-screen')">다음 단계</button>
+  </section>
+
+  <!-- 최종 클리어 화면 -->
+  <section id="game-complete" class="screen">
+    <h2>축하합니다! 모든 스테이지 클리어 🎉</h2>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
