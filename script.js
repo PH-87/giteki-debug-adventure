@@ -7,8 +7,8 @@ let score = 0;
 const problems = [
     {
         stage: 1,
-        normal: "assets/problem/stage1/normal/stage1_normal.png",
-        error: "assets/problem/stage1/error/stage1_error.png",
+        normal: "assets/problems/stage1/normal/stage1_normal.png",
+        error: "assets/problems/stage1/error/stage1_error.png",
         hint: "Hint: 화면 오른쪽 상단을 확인해 보세요!",
         answers: [
             { x: 250, y: 100, radius: 30 }
@@ -16,8 +16,8 @@ const problems = [
     },
     {
         stage: 2,
-        normal: "assets/problem/stage2/normal/stage2_normal.png",
-        error: "assets/problem/stage2/error/stage2_error.png",
+        normal: "assets/problems/stage2/normal/stage2_normal.png",
+        error: "assets/problems/stage2/error/stage2_error.png",
         hint: "Hint: 버튼의 색이 다른 것 같아요!",
         answers: [
             { x: 180, y: 200, radius: 25 }
@@ -50,10 +50,13 @@ function startGame() {
 
 // 타이머 시작
 function startGameTimer() {
-    if (timerInterval) clearInterval(timerInterval);
+    // 이미 실행 중이면 초기화
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
 
     const timerBar = document.getElementById("timer-bar");
-    let timeLeft = 60;
+    let timeLeft = 60; // 60초 제한
     const totalTime = 60;
 
     timerBar.style.width = '100%';
@@ -70,11 +73,12 @@ function startGameTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            alert("시간 초과! 😢 다시 도전하세요!");
-            showScreen('start-screen');
+            // 게임 오버 화면으로 이동
+            showScreen('game-over-screen');
         }
     }, 1000);
 }
+
 
 // 스테이지 로드
 function loadStage(stageIndex) {
