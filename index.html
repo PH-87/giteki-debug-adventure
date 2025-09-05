@@ -10,7 +10,7 @@
     <!-- 시작 화면 -->
     <div id="start-screen" class="active">
         <h1>기텍이의 디버깅 대모험</h1>
-        <p>기텍이가 마법 방망이로 오류를 찾아내는 모험!</p>
+        <p>마법 방망이로 오류를 찾아 기택이의 모험을 도와주세요!</p>
         <button onclick="showScreen('howto-screen')">게임 방법</button>
         <button onclick="startGame()">게임 시작</button>
     </div>
@@ -18,7 +18,11 @@
     <!-- 게임 방법 화면 -->
     <div id="howto-screen" class="hidden">
         <h2>게임 방법</h2>
-        <p>60초 안에 오류를 찾아 기텍이를 도와주세요!</p>
+        <p>💚 각 화면의 <strong>오류 이미지</strong>에서 차이(오류)를 찾아 터치하세요.<br><br>
+            💚 노말/에러 둘 다 누를 수 있으며, 틀린 곳을 누르면 ❌ 정답을 누르면 ⭕️ 가 표시됩니다.<br><br>
+            💚 <strong>60초</strong>의 제한시간이 있으니 시간 안에 오류를 찾아 기텍이를 도와주세요!<br><br>
+            💚 단계를 끝까지 클리어하지 못하였더라도 상품이 있으기 많은 기대 부탁드립니다.
+        </p>
         <button onclick="startGame()">게임 시작</button>
     </div>
 
@@ -26,8 +30,8 @@
     <div id="game-screen" class="hidden">
         <div class="header">
             <div class="score-info">
-                <span id="score">0/0</span>
-                <span id="stage">Stage 1</span>
+                <span id="stage-display">Stage 1</span> <span>Find: <span id="score">0/3</span></span>
+                <span>Wrong: <span id="wrong-attempts">3</span></span>
             </div>
             <button id="hint-button" onclick="showScreen('hint-screen')">힌트</button>
         </div>
@@ -66,14 +70,16 @@
 
     <!-- 게임 클리어 화면 -->
     <div id="complete-screen" class="hidden">
-        <h2>축하합니다! 모든 스테이지 클리어 🎉</h2>
+        <h2>모든 스테이지 클리어 🎉</h2>
+        <p>부스에 와주셔서 감사합니다! 스태프에게 상품을 받으세요.</p>
         <button onclick="showScreen('start-screen')">처음으로</button>
     </div>
 
     <!-- 게임 오버 화면 -->
     <div id="game-over-screen" class="hidden">
     <h2>게임 오버 😢 </h2>
-    <p>시간이 초과되었습니다!</p>
+    <p>시간이 초과되었습니다!<br><br>
+        성공한 단계에 맞는 상품을 받으세요!</p>
     <button onclick="showScreen('start-screen')">처음으로</button>
     </div>
 

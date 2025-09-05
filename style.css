@@ -142,3 +142,61 @@ button:active {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* 클릭 위치 표시를 위한 스타일 (기존 코드 유지 및 일부 수정) */
+.image-wrapper {
+    position: relative; /* 자식 요소의 absolute 위치를 위한 기준 */
+}
+
+.click-indicator {
+    position: absolute;
+    width: 50px;  /* 원의 너비 */
+    height: 50px; /* 원의 높이 */
+    border: 3px solid red; /* 빨간색 테두리 */
+    border-radius: 50%; /* 원 모양으로 만들기 */
+    transform: translate(-50%, -50%); /* 원의 중심을 클릭 위치로 이동 */
+    pointer-events: none; /* 원이 다른 클릭을 방해하지 않도록 설정 */
+    box-sizing: border-box;
+}
+
+/* 오답 X 표시를 위한 스타일 추가 */
+.error-marker {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%); /* X의 중심을 클릭 위치로 이동 */
+    pointer-events: none;
+}
+
+.error-marker::before,
+.error-marker::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    top: 50%;
+    left: 0;
+    margin-top: -1.5px; /* 높이의 절반만큼 위로 올려서 중앙 정렬 */
+}
+
+.error-marker::before {
+    transform: rotate(45deg);
+}
+
+.error-marker::after {
+    transform: rotate(-45deg);
+}
+
+/* 테스트용 정답 위치 표시를 위한 스타일 */
+.test-answer-marker {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 150, 255, 0.7); /* 반투명 파란색 테두리 */
+    background-color: rgba(0, 150, 255, 0.2); /* 반투명 파란색 배경 */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* 클릭 방해하지 않도록 설정 */
+    box-sizing: border-box;
+}
