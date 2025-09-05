@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giteki Debug Adventure</title>
-  <link rel="stylesheet" href="style.css"> <!-- CSS 연결 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기텍이의 디버깅 대모험</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- 시작 화면 -->
-  <div id="start-screen">
-    <h1>기텍이의 디버깅 대모험</h1>
-    <button onclick="showScreen('howto-screen')">게임 방법</button>
-    <button onclick="showScreen('game-screen')">게임 시작</button>
-  </div>
-
-  <!-- 게임 방법 화면 -->
-  <div id="howto-screen" class="hidden">
-    <h2>게임 방법</h2>
-    <p>60초 안에 오류를 찾아 기텍이를 도와주세요!</p>
-    <button onclick="showScreen('game-screen')">게임 시작</button>
-  </div>
-
-  <!-- 게임 화면 -->
-  <div id="game-screen" class="hidden">
-    <h2>Stage 1</h2>
-    <div class="images">
-      <div>정상 이미지</div>
-      <div>오류 이미지</div>
+    <!-- 시작 화면 -->
+    <div id="start-screen" class="active">
+        <h1>기텍이의 디버깅 대모험</h1>
+        <p>기텍이가 마법 방망이로 오류를 찾아내는 모험!</p>
+        <button onclick="showScreen('howto-screen')">게임 방법</button>
+        <button onclick="startGame()">게임 시작</button>
     </div>
-    <p>남은 시간: <span id="time">60</span></p>
-    <p>정답: <span id="score">0</span>/5</p>
-    <button onclick="showScreen('hint-screen')">힌트</button>
-  </div>
 
-  <!-- 힌트 화면 -->
-  <div id="hint-screen" class="hidden">
-    <p>예시 힌트: Error: Value out of range</p>
-    <button onclick="showScreen('game-screen')">닫기</button>
-  </div>
+    <!-- 게임 방법 화면 -->
+    <div id="howto-screen" class="hidden">
+        <h2>게임 방법</h2>
+        <p>60초 안에 오류를 찾아 기텍이를 도와주세요!</p>
+        <button onclick="startGame()">게임 시작</button>
+    </div>
 
-  <!-- 스테이지 클리어 화면 -->
-  <div id="stage-clear-screen" class="hidden">
-    <h2>Stage Clear!</h2>
-    <button onclick="showScreen('game-screen')">다음 단계</button>
-  </div>
+    <!-- 게임 화면 -->
+    <div id="game-screen" class="hidden">
+        <div class="header">
+            <div class="score-info">
+                <span id="score">0/0</span>
+                <span id="stage">Stage 1</span>
+            </div>
+            <button id="hint-button" onclick="showScreen('hint-screen')">힌트</button>
+        </div>
+        <div class="image-container">
+            <div class="image-wrapper">
+                <h3>정상 이미지</h3>
+                <img id="normal-image" src="" alt="정상 이미지">
+            </div>
+            <div class="image-wrapper">
+                <h3>오류 이미지</h3>
+                <img id="error-image" src="" alt="오류 이미지">
+            </div>
+        </div>
+        <div class="timer-container">
+            <div id="timer-bar"></div>
+        </div>
+    </div>
 
-  <!-- 게임 클리어 화면 -->
-  <div id="complete-screen" class="hidden">
-    <h2>축하합니다! 모든 스테이지 클리어 🎉</h2>
-  </div>
+    <!-- 힌트 화면 -->
+    <div id="hint-screen" class="hidden">
+        <div class="modal">
+            <div class="modal-content">
+                <h2>기텍이의 조언</h2>
+                <p id="hint-text">힌트가 여기에 표시됩니다.</p>
+                <button onclick="showScreen('game-screen')">닫기</button>
+            </div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- 스테이지 클리어 화면 -->
+    <div id="stage-clear-screen" class="hidden">
+        <h2>Stage Clear!</h2>
+        <p>축하합니다!</p>
+        <button onclick="nextStage()">다음 단계</button>
+    </div>
+
+    <!-- 게임 클리어 화면 -->
+    <div id="complete-screen" class="hidden">
+        <h2>축하합니다! 모든 스테이지 클리어 🎉</h2>
+        <button onclick="showScreen('start-screen')">처음으로</button>
+    </div>
+
+    <!-- JS 파일 연결 -->
+    <script src="./script.js"></script>
 </body>
-
 </html>
