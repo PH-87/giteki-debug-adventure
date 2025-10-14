@@ -8,11 +8,16 @@
 </head>
 <body>
     <!-- 시작 화면 -->
+    </div>
     <div id="start-screen" class="active">
-        <h1>기텍이의 디버깅 대모험</h1>
-        <p>마법 방망이로 오류를 찾아 기택이의 모험을 도와주세요!</p>
-        <button onclick="showScreen('howto-screen')">게임 방법</button>
-        <button onclick="startGame()">게임 시작</button>
+    <img src="assets/images/logo.png" alt="게임 로고" class="logo-image">
+
+    <img src="assets/images/giteci_main.PNG" alt="기텍이 캐릭터" class="character-image">
+
+    <div class="start-buttons">
+        <img src="assets/images/game_role_btn.png" alt="게임 방법" class="button-image" onclick="showScreen('howto-screen')">
+        <img src="assets/images/game_start_btn.png" alt="게임 시작" class="button-image" onclick="startGame()">
+    </div>
     </div>
 
     <!-- 게임 방법 화면 -->
@@ -23,15 +28,16 @@
             💚 <strong>60초</strong>의 제한시간이 있으니 시간 안에 오류를 찾아 기텍이를 도와주세요!<br><br>
             💚 단계를 끝까지 클리어하지 못하였더라도 상품이 있으기 많은 기대 부탁드립니다.
         </p>
-        <button onclick="startGame()">게임 시작</button>
+        <img src="assets/images/game_start_btn.png" alt="게임 시작" class="button-image" onclick="startGame()">
     </div>
 
     <!-- 게임 화면 -->
     <div id="game-screen" class="hidden">
         <div class="header">
             <div class="score-info">
-                <span id="stage-display">Stage 1</span> <span>Find: <span id="score">0/3</span></span>
-                <span>Wrong: <span id="wrong-attempts">3</span></span>
+                <span id="stage-display">Stage 1</span> 
+                <span>Find: <span id="score">0/3</span></span>
+                <div id="life-hearts"></div>
             </div>
             <button id="hint-button" onclick="showScreen('hint-screen')">힌트</button>
         </div>
@@ -78,8 +84,7 @@
     <!-- 게임 오버 화면 -->
     <div id="game-over-screen" class="hidden">
     <h2>게임 오버 😢 </h2>
-    <p>시간이 초과되었습니다!<br><br>
-        성공한 단계에 맞는 상품을 받으세요!</p>
+    <p>참여해주셔서 감사합니다!!</p>
     <button onclick="showScreen('start-screen')">처음으로</button>
     </div>
 

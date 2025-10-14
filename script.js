@@ -6,6 +6,10 @@ let wrongAttempts = 0; // 현재 스테이지의 오답 횟수
 const MAX_WRONG_ATTEMPTS = 3; // 최대 허용 오답 횟수
 let currentProblem; // 랜덤으로 선택된 현재 문제를 저장할 변수
 
+// 하트 이미지 경로 (실제 파일 경로로 수정하세요!)
+const HEART_IMG_SRC = 'assets/images/life_normal.PNG';
+const BROKEN_HEART_IMG_SRC = 'assets/images/life_die.PNG';
+
 const problems = [
     // --- 1단계 문제들 (5개) ---
     [
@@ -365,6 +369,8 @@ function loadStage(stageIndex) {
     // 랜덤으로 뽑은 문제를 전역 변수에 저장
     currentProblem = problem;
 
+    renderHearts(); // 하트 추가
+
     problem.answers.forEach(ans => ans.found = false); // 정답 찾음 상태 초기화
 
     const normalImage = document.getElementById("normal-image");
@@ -382,13 +388,14 @@ function loadStage(stageIndex) {
     score = 0;
     wrongAttempts = 0; // 오답 횟수 초기화
     updateGameStats(); // 점수 및 오답 횟수 UI 업데이트
+
 }
 
 // 점수 및 오답 횟수 UI 업데이트 함수
 function updateGameStats() {
     const problem = currentProblem;
+    // 점수 표시만 남깁니다.
     document.getElementById("score").textContent = `${score}/${problem.answers.length}`;
-    document.getElementById("wrong-attempts").textContent = `${MAX_WRONG_ATTEMPTS - wrongAttempts}`;
 }
 
 // 마커 그리기 (원 또는 X) 함수
@@ -474,8 +481,17 @@ function handleImageClick(event) {
 
     if (!isCorrectClick) {
         wrongAttempts++;
+
+        // 1. 하트 이미지들을 모두 가져옵니다.
+        const hearts = document.querySelectorAll('#life-hearts img');
+        // 2. 틀린 횟수에 해당하는 하트 이미지의 src를 깨진 하트로 변경합니다.
+        if (hearts[wrongAttempts - 1]) {
+            hearts[wrongAttempts - 1].src = BROKEN_HEART_IMG_SRC;
+        }
+
         drawMarker(markerLeft, markerTop, 'wrong', clickedImageWrapper);
         updateGameStats();
+        
 
         if (wrongAttempts >= MAX_WRONG_ATTEMPTS) {
             clearInterval(timerInterval);
@@ -532,4 +548,16 @@ function showAnswersForTesting() {
             wrapper.appendChild(hintMarker);
         });
     });
+}
+
+// 하트 생명을 화면에 생성하는 함수
+function renderHearts() {
+    const heartsContainer = document.getElementById('life-hearts');
+    heartsContainer.innerHTML = ''; // 기존 하트들을 초기화
+
+    for (let i = 0; i < MAX_WRONG_ATTEMPTS; i++) {
+        const heartImg = document.createElement('img');
+        heartImg.src = HEART_IMG_SRC;
+        heartsContainer.appendChild(heartImg);
+    }
 }
