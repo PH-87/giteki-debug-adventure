@@ -89,8 +89,8 @@ button:active {
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 100%;
-    max-width: 900px;
+    width: 100vw;
+    max-width: 1200px;
     flex-wrap: wrap;
 }
 
@@ -285,4 +285,21 @@ button:active {
     background-color: #7f8c8d; /* 진한 회색 */
     cursor: not-allowed;      /* 금지 커서 모양 */
     transform: none;          /* 호버 효과 제거 */
+}
+
+.code-container {
+    width: 100%;
+    flex-grow: 1; /* wrapper 안에서 남은 공간을 모두 차지하도록 설정 */
+    position: relative; /* 정답/오답 표시의 기준점이 되도록 명시 */
+}
+
+/* Prism.js가 생성하는 pre, code 태그의 기본 여백을 초기화 */
+.code-container pre,
+.code-container code {
+    margin: 0 !important;
+    padding: 1em !important; /* 모든 방향의 여백을 동일하게 재설정 */
+    height: 100%; /* 부모 컨테이너 높이를 꽉 채움 */
+    box-sizing: border-box;
+    overflow: auto !important; /* 스크롤 기능을 여기서 담당! */
+    font-size: 12px; /* 코드의 글자 크기 */
 }

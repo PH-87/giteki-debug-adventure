@@ -18,295 +18,295 @@ const problems = [
     // --- 1단계 문제들 (5개) ---
     [
         {
-            stage: 1,
-            normal: "assets/problems/stage1/normal/stage1_normal1.png",
-            error: "assets/problems/stage1/error/stage1_error1.png",
-            hint: "Hint: 1단계-문제1 힌트입니다.",
-            answers: [
-                { x: 85, y: 120, radius: 25, found: false },
-                { x: 150, y: 200, radius: 30, found: false },
-                { x: 290, y: 80, radius: 20, found: false }
-            ] 
+            "stage": 1,
+            normal: "assets/problems/stage1/1-1o.py",
+            error: "assets/problems/stage1/1-1x.py",
+            "answers": [
+            {"x": 220, "y": 140, "radius": 30},   // pages=0
+            {"x": 240, "y": 260, "radius": 30},   // 평균식 len(books)-1
+            {"x": 200, "y": 340, "radius": 30}    // "다섯 권"
+            ],
+            "hint": "pages 값이 0, 평균 계산식 분모 오류, 재고 수가 문자열입니다."
         },
         {
-            stage: 1,
-            normal: "assets/problems/stage1/normal/stage1_normal2.png",
-            error: "assets/problems/stage1/error/stage1_error2.png",
-            hint: "Hint: 1단계-문제2 힌트입니다.",
-            answers: [
-                { x: 50, y: 50, radius: 20, found: false },
-                { x: 200, y: 180, radius: 25, found: false },
-                { x: 310, y: 240, radius: 30, found: false }
-            ]
+            "stage": 1,
+            normal: "assets/problems/stage1/1-2o.py",
+            error: "assets/problems/stage1/1-2x.py",
+            "answers": [
+            {"x": 220, "y": 140, "radius": 30},   // quantity=-3
+            {"x": 240, "y": 240, "radius": 30},   // 배송비 문자열
+            {"x": 220, "y": 320, "radius": 30}    // 할인율 1.2
+            ],
+            "hint": "주문 수량이 음수, 배송비가 문자열, 할인율 값이 1 이상입니다."
         },
         {
-            stage: 1,
-            normal: "assets/problems/stage1/normal/stage1_normal3.png",
-            error: "assets/problems/stage1/error/stage1_error3.png",
-            hint: "Hint: 1단계-문제3 힌트입니다.",
-            answers: [
-                { x: 110, y: 90, radius: 30, found: false },
-                { x: 220, y: 150, radius: 20, found: false },
-                { x: 350, y: 200, radius: 25, found: false }
-            ]
+            "stage": 1,
+            normal: "assets/problems/stage1/1-3o.py",
+            error: "assets/problems/stage1/1-3x.py",
+            "answers": [
+            {"x": 220, "y": 140, "radius": 30},   // 999 온도
+            {"x": 240, "y": 200, "radius": 30},   // wind에 문자열
+            {"x": 220, "y": 280, "radius": 30}    // 평균식 분모 +2
+            ],
+            "hint": "온도 값이 비정상, 풍속 데이터에 문자열, 평균 계산식 분모가 잘못되었습니다."
         },
         {
-            stage: 1,
-            normal: "assets/problems/stage1/normal/stage1_normal4.png",
-            error: "assets/problems/stage1/error/stage1_error4.png",
-            hint: "Hint: 1단계-문제4 힌트입니다.",
-            answers: [
-                { x: 90, y: 250, radius: 25, found: false },
-                { x: 180, y: 110, radius: 20, found: false },
-                { x: 280, y: 60, radius: 30, found: false }
-            ]
+            "stage": 1,
+            normal: "assets/problems/stage1/1-4o.py",
+            error: "assets/problems/stage1/1-4x.py",
+            "answers": [
+            {"x": 220, "y": 140, "radius": 30},   // balance 음수
+            {"x": 240, "y": 220, "radius": 30},   // deposit에 문자열
+            {"x": 220, "y": 300, "radius": 30}    // 평균식 분모 -2
+            ],
+            "hint": "잔액이 음수, 입금 금액이 문자열, 평균 계산식 분모가 잘못되었습니다."
         },
         {
-            stage: 1,
-            normal: "assets/problems/stage1/normal/stage1_normal5.png",
-            error: "assets/problems/stage1/error/stage1_error5.png",
-            hint: "Hint: 1단계-문제5 힌트입니다.",
-            answers: [
-                { x: 130, y: 70, radius: 30, found: false },
-                { x: 250, y: 210, radius: 25, found: false },
-                { x: 320, y: 130, radius: 20, found: false }
-            ]
+            "stage": 1,
+            normal: "assets/problems/stage1/1-5o.py",
+            error: "assets/problems/stage1/1-5x.py",
+            "answers": [
+            {"x": 220, "y": 140, "radius": 30},   // rating=6.5
+            {"x": 240, "y": 240, "radius": 30},   // add_rating에 'A'
+            {"x": 220, "y": 320, "radius": 30}    // 평균식 분모 +1
+            ],
+            "hint": "평점이 5를 초과, 평점에 문자열 입력, 평균 계산식 분모가 잘못되었습니다."
         }
     ],
 
     // --- 2단계 문제들 (5개) ---
     [
         {
-            stage: 2,
-            normal: "assets/problems/stage2/normal/stage2_normal1.png",
-            error: "assets/problems/stage2/error/stage2_error1.png",
-            hint: "Hint: 2단계-문제1 힌트입니다.",
-            answers: [
-                { x: 100, y: 100, radius: 20, found: false },
-                { x: 180, y: 220, radius: 25, found: false },
-                { x: 300, y: 90, radius: 30, found: false }
-            ] 
+            "stage": 2,
+            normal: "assets/problems/stage2/2-1o.py",
+            error: "assets/problems/stage2/2-1x.py",
+            "answers": [
+            {"x": 380, "y": 80, "radius": 30},
+            {"x": 250, "y": 180, "radius": 30},
+            {"x": 200, "y": 240, "radius": 30}
+            ],
+            "hint": "점수 타입 오류, 평균 계산식의 분모 오류, 등급 조건식의 경계 값 오류입니다."
         },
         {
-            stage: 2,
-            normal: "assets/problems/stage2/normal/stage2_normal2.png",
-            error: "assets/problems/stage2/error/stage2_error2.png",
-            hint: "Hint: 2단계-문제2 힌트입니다.",
-            answers: [
-                { x: 70, y: 140, radius: 30, found: false },
-                { x: 210, y: 70, radius: 20, found: false },
-                { x: 330, y: 230, radius: 25, found: false }
-            ]
+            "stage": 2,
+            normal: "assets/problems/stage2/2-2o.py",
+            error: "assets/problems/stage2/2-2x.py",
+            "answers": [
+            {"x": 320, "y": 60, "radius": 30},
+            {"x": 200, "y": 160, "radius": 30},
+            {"x": 320, "y": 220, "radius": 30}
+            ],
+            "hint": "초기 재고 데이터 오류, 함수 반환 값 오류, 재고 업데이트 로직 오류입니다."
         },
         {
-            stage: 2,
-            normal: "assets/problems/stage2/normal/stage2_normal3.png",
-            error: "assets/problems/stage2/error/stage2_error3.png",
-            hint: "Hint: 2단계-문제3 힌트입니다.",
-            answers: [
-                { x: 120, y: 200, radius: 25, found: false },
-                { x: 250, y: 100, radius: 30, found: false },
-                { x: 340, y: 180, radius: 20, found: false }
-            ]
+            "stage": 2,
+            normal: "assets/problems/stage2/2-3o.py",
+            error: "assets/problems/stage2/2-3x.py",
+            "answers": [
+            {"x": 420, "y": 100, "radius": 30},
+            {"x": 180, "y": 160, "radius": 30},
+            {"x": 240, "y": 240, "radius": 30}
+            ],
+            "hint": "연령 제한 데이터 타입 오류, 나이 비교 조건식 오류, 총 금액 계산식 오류입니다."
         },
         {
-            stage: 2,
-            normal: "assets/problems/stage2/normal/stage2_normal4.png",
-            error: "assets/problems/stage2/error/stage2_error4.png",
-            hint: "Hint: 2단계-문제4 힌트입니다.",
-            answers: [
-                { x: 60, y: 80, radius: 20, found: false },
-                { x: 190, y: 240, radius: 25, found: false },
-                { x: 310, y: 120, radius: 30, found: false }
-            ]
+            "stage": 2,
+            normal: "assets/problems/stage2/2-4o.py",
+            error: "assets/problems/stage2/2-4x.py",
+            "answers": [
+            {"x": 340, "y": 120, "radius": 30},
+            {"x": 460, "y": 140, "radius": 30},
+            {"x": 300, "y": 240, "radius": 30}
+            ],
+            "hint": "계좌 잔액 데이터 오류, 이자율 데이터 타입 오류, 최종 잔액 업데이트 로직 오류입니다."
         },
         {
-            stage: 2,
-            normal: "assets/problems/stage2/normal/stage2_normal5.png",
-            error: "assets/problems/stage2/error/stage2_error5.png",
-            hint: "Hint: 2단계-문제5 힌트입니다.",
-            answers: [
-                { x: 140, y: 160, radius: 30, found: false },
-                { x: 260, y: 90, radius: 20, found: false },
-                { x: 360, y: 210, radius: 25, found: false }
-            ]
+            "stage": 2,
+            normal: "assets/problems/stage2/2-5o.py",
+            error: "assets/problems/stage2/2-5x.py",
+            "answers": [
+            {"x": 340, "y": 80, "radius": 30},
+            {"x": 250, "y": 180, "radius": 30},
+            {"x": 280, "y": 260, "radius": 30}
+            ],
+            "hint": "운동 시간 데이터 타입 오류, 함수 내 변수 할당 오류, 총 칼로리 누적 로직 오류입니다."
         }
     ],
 
     // --- 3단계 문제들 (5개) ---
     [
         {
-            stage: 3,
-            normal: "assets/problems/stage3/normal/stage3_normal1.png",
-            error: "assets/problems/stage3/error/stage3_error1.png",
-            hint: "Hint: 3단계-문제1 힌트입니다.",
-            answers: [
-                { x: 95, y: 110, radius: 25, found: false },
-                { x: 170, y: 190, radius: 30, found: false },
-                { x: 280, y: 70, radius: 20, found: false }
-            ] 
+            "stage": 3,
+            normal: "assets/problems/stage3/3-1o.py",
+            error: "assets/problems/stage3/3-1x.py",
+            "answers": [
+            {"x": 380, "y": 80, "radius": 30},
+            {"x": 260, "y": 180, "radius": 30},
+            {"x": 240, "y": 220, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 계산식의 연산자를 비교문으로, 함수의 인자 순서가 잘못되었습니다."
         },
         {
-            stage: 3,
-            normal: "assets/problems/stage3/normal/stage3_normal2.png",
-            error: "assets/problems/stage3/error/stage3_error2.png",
-            hint: "Hint: 3단계-문제2 힌트입니다.",
-            answers: [
-                { x: 125, y: 215, radius: 30, found: false },
-                { x: 235, y: 135, radius: 20, found: false },
-                { x: 345, y: 85, radius: 25, found: false }
-            ]
+            "stage": 3,
+            normal: "assets/problems/stage3/3-2o.py",
+            error: "assets/problems/stage3/3-2x.py",
+            "answers": [
+            {"x": 420, "y": 100, "radius": 30},
+            {"x": 260, "y": 240, "radius": 30},
+            {"x": 280, "y": 300, "radius": 30}
+            ],
+            "hint": "비정상적인 데이터 값, 리스트에 값을 추가하는 로직, 조건문의 비교 연산자가 잘못되었습니다."
         },
         {
-            stage: 3,
-            normal: "assets/problems/stage3/normal/stage3_normal3.png",
-            error: "assets/problems/stage3/error/stage3_error3.png",
-            hint: "Hint: 3단계-문제3 힌트입니다.",
-            answers: [
-                { x: 75, y: 245, radius: 20, found: false },
-                { x: 185, y: 65, radius: 25, found: false },
-                { x: 295, y: 175, radius: 30, found: false }
-            ]
+            "stage": 3,
+            normal: "assets/problems/stage3/3-3o.py",
+            error: "assets/problems/stage3/3-3x.py",
+            "answers": [
+            {"x": 450, "y": 80, "radius": 30},
+            {"x": 260, "y": 240, "radius": 30},
+            {"x": 280, "y": 280, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 계산식의 나눗셈 로직, 조건문의 비교 연산자가 잘못되었습니다."
         },
         {
-            stage: 3,
-            normal: "assets/problems/stage3/normal/stage3_normal4.png",
-            error: "assets/problems/stage3/error/stage3_error4.png",
-            hint: "Hint: 3단계-문제4 힌트입니다.",
-            answers: [
-                { x: 105, y: 155, radius: 25, found: false },
-                { x: 215, y: 235, radius: 30, found: false },
-                { x: 325, y: 55, radius: 20, found: false }
-            ]
+            "stage": 3,
+            normal: "assets/problems/stage3/3-4o.py",
+            error: "assets/problems/stage3/3-4x.py",
+            "answers": [
+            {"x": 520, "y": 40, "radius": 30},
+            {"x": 280, "y": 140, "radius": 30},
+            {"x": 300, "y": 220, "radius": 30}
+            ],
+            "hint": "딕셔너리의 키 이름 오타, 가격 비교 연산자, 상태 값의 데이터 타입이 잘못되었습니다."
         },
         {
-            stage: 3,
-            normal: "assets/problems/stage3/normal/stage3_normal5.png",
-            error: "assets/problems/stage3/error/stage3_error5.png",
-            hint: "Hint: 3단계-문제5 힌트입니다.",
-            answers: [
-                { x: 80, y: 95, radius: 30, found: false },
-                { x: 195, y: 185, radius: 20, found: false },
-                { x: 305, y: 255, radius: 25, found: false }
-            ]
+            "stage": 3,
+            normal: "assets/problems/stage3/3-5o.py",
+            error: "assets/problems/stage3/3-5x.py",
+            "answers": [
+            {"x": 420, "y": 120, "radius": 30},
+            {"x": 280, "y": 180, "radius": 30},
+            {"x": 380, "y": 260, "radius": 30}
+            ],
+            "hint": "초기 데이터 값 누락, 조건문의 비교 연산자, 계산식의 연산자가 잘못되었습니다."
         }
     ],
 
     // --- 4단계 문제들 (5개) ---
     [
         {
-            stage: 4,
-            normal: "assets/problems/stage4/normal/stage4_normal1.png",
-            error: "assets/problems/stage4/error/stage4_error1.png",
-            hint: "Hint: 4단계-문제1 힌트입니다.",
-            answers: [
-                { x: 68, y: 158, radius: 20, found: false },
-                { x: 178, y: 248, radius: 25, found: false },
-                { x: 318, y: 78, radius: 30, found: false }
-            ] 
+            "stage": 4,
+            normal: "assets/problems/stage4/4-1o.py",
+            error: "assets/problems/stage4/4-1x.py",
+            "answers": [
+            {"x": 480, "y": 80, "radius": 30},
+            {"x": 280, "y": 220, "radius": 30},
+            {"x": 280, "y": 300, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 재고 누적 로직, 함수의 반환 값 계산식이 잘못되었습니다."
         },
         {
-            stage: 4,
-            normal: "assets/problems/stage4/normal/stage4_normal2.png",
-            error: "assets/problems/stage4/error/stage4_error2.png",
-            hint: "Hint: 4단계-문제2 힌트입니다.",
-            answers: [
-                { x: 98, y: 88, radius: 30, found: false },
-                { x: 208, y: 178, radius: 20, found: false },
-                { x: 338, y: 238, radius: 25, found: false }
-            ]
+            "stage": 4,
+            normal: "assets/problems/stage4/4-2o.py",
+            error: "assets/problems/stage4/4-2x.py",
+            "answers": [
+            {"x": 460, "y": 140, "radius": 30},
+            {"x": 400, "y": 200, "radius": 30},
+            {"x": 280, "y": 280, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 리스트에 값을 추가하는 로직, 합산 시 잘못된 값을 더하는 로직이 있습니다."
         },
         {
-            stage: 4,
-            normal: "assets/problems/stage4/normal/stage4_normal3.png",
-            error: "assets/problems/stage4/error/stage4_error3.png",
-            hint: "Hint: 4단계-문제3 힌트입니다.",
-            answers: [
-                { x: 118, y: 228, radius: 25, found: false },
-                { x: 248, y: 108, radius: 30, found: false },
-                { x: 358, y: 168, radius: 20, found: false }
-            ]
+            "stage": 4,
+            normal: "assets/problems/stage4/4-3o.py",
+            error: "assets/problems/stage4/4-3x.py",
+            "answers": [
+            {"x": 450, "y": 200, "radius": 30},
+            {"x": 280, "y": 260, "radius": 30},
+            {"x": 240, "y": 360, "radius": 30}
+            ],
+            "hint": "리스트의 범위를 벗어난 인덱스, 딕셔너리의 잘못된 키, 함수의 반환 값이 잘못되었습니다."
         },
         {
-            stage: 4,
-            normal: "assets/problems/stage4/normal/stage4_normal4.png",
-            error: "assets/problems/stage4/error/stage4_error4.png",
-            hint: "Hint: 4단계-문제4 힌트입니다.",
-            answers: [
-                { x: 78, y: 188, radius: 20, found: false },
-                { x: 168, y: 98, radius: 25, found: false },
-                { x: 298, y: 258, radius: 30, found: false }
-            ]
+            "stage": 4,
+            normal: "assets/problems/stage4/4-4o.py",
+            error: "assets/problems/stage4/4-4x.py",
+            "answers": [
+            {"x": 580, "y": 80, "radius": 30},
+            {"x": 300, "y": 220, "radius": 30},
+            {"x": 80, "y": 290, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 데미지 계산식의 연산자, 공격 대상 변수가 잘못되었습니다."
         },
         {
-            stage: 4,
-            normal: "assets/problems/stage4/normal/stage4_normal5.png",
-            error: "assets/problems/stage4/error/stage4_error5.png",
-            hint: "Hint: 4단계-문제5 힌트입니다.",
-            answers: [
-                { x: 138, y: 128, radius: 30, found: false },
-                { x: 228, y: 208, radius: 20, found: false },
-                { x: 348, y: 88, radius: 25, found: false }
-            ]
+            "stage": 4,
+            normal: "assets/problems/stage4/4-5o.py",
+            error: "assets/problems/stage4/4-5x.py",
+            "answers": [
+            {"x": 480, "y": 80, "radius": 30},
+            {"x": 350, "y": 180, "radius": 30},
+            {"x": 350, "y": 280, "radius": 30}
+            ],
+            "hint": "데이터의 타입, 리스트에 값을 추가하는 로직, 집계 시 초기 카운트 값이 잘못되었습니다."
         }
     ],
 
     // --- 5단계 문제들 (5개) ---
     [
         {
-            stage: 5,
-            normal: "assets/problems/stage5/normal/stage5_normal1.png",
-            error: "assets/problems/stage5/error/stage5_error1.png",
-            hint: "Hint: 5단계-문제1 힌트입니다.",
-            answers: [
-                { x: 55, y: 155, radius: 25, found: false },
-                { x: 165, y: 235, radius: 30, found: false },
-                { x: 275, y: 65, radius: 20, found: false }
-            ] 
+            "stage": 5,
+            normal: "assets/problems/stage5/5-1o.py",
+            error: "assets/problems/stage5/5-1x.py",
+            "answers": [
+            {"x": 300, "y": 220, "radius": 30},
+            {"x": 660, "y": 380, "radius": 30},
+            {"x": 680, "y": 500, "radius": 30}
+            ],
+            "hint": "데이터 포함 여부 확인 로직, 합산하는 데이터의 범위, 특정 조건문의 논리 연산자가 잘못되었습니다."
         },
         {
-            stage: 5,
-            normal: "assets/problems/stage5/normal/stage5_normal2.png",
-            error: "assets/problems/stage5/error/stage5_error2.png",
-            hint: "Hint: 5단계-문제2 힌트입니다.",
-            answers: [
-                { x: 85, y: 105, radius: 20, found: false },
-                { x: 195, y: 195, radius: 25, found: false },
-                { x: 305, y: 245, radius: 30, found: false }
-            ]
+            "stage": 5,
+            normal: "assets/problems/stage5/5-2o.py",
+            error: "assets/problems/stage5/5-2x.py",
+            "answers": [
+            {"x": 420, "y": 200, "radius": 30},
+            {"x": 580, "y": 340, "radius": 30},
+            {"x": 560, "y": 500, "radius": 30}
+            ],
+            "hint": "능력치 계산의 기준 변수, 리스트 필터링 조건, 피해량 계산식의 연산자가 잘못되었습니다."
         },
         {
-            stage: 5,
-            normal: "assets/problems/stage5/normal/stage5_normal3.png",
-            error: "assets/problems/stage5/error/stage5_error3.png",
-            hint: "Hint: 5단계-문제3 힌트입니다.",
-            answers: [
-                { x: 115, y: 205, radius: 30, found: false },
-                { x: 225, y: 115, radius: 20, found: false },
-                { x: 335, y: 175, radius: 25, found: false }
-            ]
+            "stage": 5,
+            normal: "assets/problems/stage5/5-3o.py",
+            error: "assets/problems/stage5/5-3x.py",
+            "answers": [
+            {"x": 500, "y": 180, "radius": 30},
+            {"x": 280, "y": 320, "radius": 30},
+            {"x": 260, "y": 440, "radius": 30}
+            ],
+            "hint": "규칙 적용 시 조건문의 논리 연산자, 문자열을 만드는 데 사용된 변수, 딕셔너리의 키로 사용된 값이 잘못되었습니다."
         },
         {
-            stage: 5,
-            normal: "assets/problems/stage5/normal/stage5_normal4.png",
-            error: "assets/problems/stage5/error/stage5_error4.png",
-            hint: "Hint: 5단계-문제4 힌트입니다.",
-            answers: [
-                { x: 65, y: 175, radius: 25, found: false },
-                { x: 175, y: 85, radius: 30, found: false },
-                { x: 285, y: 225, radius: 20, found: false }
-            ]
+            "stage": 5,
+            normal: "assets/problems/stage5/5-4o.py",
+            error: "assets/problems/stage5/5-4x.py",
+            "answers": [
+            {"x": 580, "y": 140, "radius": 30},
+            {"x": 460, "y": 340, "radius": 30},
+            {"x": 440, "y": 420, "radius": 30}
+            ],
+            "hint": "최저점을 제외하는 조건, 평균을 계산하는 분모, 최종 성적을 환산하는 계산식이 잘못되었습니다."
         },
         {
-            stage: 5,
-            normal: "assets/problems/stage5/normal/stage5_normal5.png",
-            error: "assets/problems/stage5/error/stage5_error5.png",
-            hint: "Hint: 5단계-문제5 힌트입니다.",
-            answers: [
-                { x: 145, y: 135, radius: 20, found: false },
-                { x: 235, y: 215, radius: 25, found: false },
-                { x: 355, y: 95, radius: 30, found: false }
-            ]
+            "stage": 5,
+            normal: "assets/problems/stage5/5-5o.py",
+            error: "assets/problems/stage5/5-5x.py",
+            "answers": [
+            {"x": 400, "y": 180, "radius": 30},
+            {"x": 580, "y": 340, "radius": 30},
+            {"x": 280, "y": 420, "radius": 30}
+            ],
+            "hint": "비용 계산식의 연산자, 총 거리를 합산하는 데이터의 범위, 최적 경로를 선택하는 비교 연산자가 잘못되었습니다."
         }
     ]
 ];
@@ -326,7 +326,7 @@ function showScreen(screenId) {
 }
 
 // 게임 시작 함수
-function startGame() {
+async function startGame() {
     currentStage = 0;
     loadStage(currentStage);
     showScreen('game-screen');
@@ -385,16 +385,18 @@ function resumeGameTimer() {
 }
 
 // 스테이지 로드 함수
-function loadStage(stageIndex) {
+async function loadStage(stageIndex) { // 'async' 추가
     clearMarkers(); // 이전 스테이지의 모든 마커 제거
 
     // 1. 현재 스테이지에 해당하는 문제 묶음(배열)을 가져옵니다.
     const stageProblems = problems[stageIndex];
     
     // 2. 해당 묶음에서 문제 하나를 무작위로 선택합니다.
-    const randomIndex = Math.floor(Math.random() * stageProblems.length);
-    const problem = stageProblems[randomIndex];
-    
+    // random
+    // const randomIndex = Math.floor(Math.random() * stageProblems.length);
+    // const problem = stageProblems[randomIndex];
+    const problem = stageProblems[0];
+
     // 랜덤으로 뽑은 문제를 전역 변수에 저장
     currentProblem = problem;
 
@@ -406,14 +408,28 @@ function loadStage(stageIndex) {
 
     problem.answers.forEach(ans => ans.found = false); // 정답 찾음 상태 초기화
 
-    const normalImage = document.getElementById("normal-image");
-    const errorImage = document.getElementById("error-image");
+    // --- 이 부분이 핵심 변경사항입니다 ---
+    // 1. fetch를 사용해 각 경로의 .py 파일 내용을 비동기적으로 불러옵니다.
+    const normalResponse = await fetch(problem.normal);
+    const normalCode = await normalResponse.text(); // 파일 내용을 텍스트로 변환
 
-    normalImage.src = problem.normal;
-    errorImage.src = problem.error;
+    const errorResponse = await fetch(problem.error);
+    const errorCode = await errorResponse.text(); // 파일 내용을 텍스트로 변환
 
-    // 테스트용 정답 표시 기능 (이미지가 로드된 후 실행)
-    errorImage.onload = showAnswersForTesting;
+    // 2. 불러온 코드 내용을 컨테이너에 삽입합니다.
+    const normalContainer = document.getElementById("normal-code-container");
+    const errorContainer = document.getElementById("error-code-container");
+
+    // "language-python"으로 변경해야 Prism.js가 파이썬 문법에 맞게 색칠합니다.
+    normalContainer.innerHTML = `<pre class="language-python"><code>${normalCode}</code></pre>`;
+    errorContainer.innerHTML = `<pre class="language-python"><code>${errorCode}</code></pre>`;
+    
+    // 3. Prism.js를 실행하여 코드를 하이라이팅합니다.
+    Prism.highlightAll();
+    // ------------------------------------
+
+    // 테스트용 정답 표시 기능 (코드가 렌더링 된 후 실행)
+    showAnswersForTesting();
 
     document.getElementById("stage-display").textContent = `Stage ${problem.stage}`;
     document.getElementById("hint-text").textContent = problem.hint;
@@ -451,24 +467,25 @@ function clearMarkers() {
     document.querySelectorAll('.click-indicator, .error-marker, .test-answer-marker').forEach(marker => marker.remove());
 }
 
-// 이미지 클릭 처리 함수
-function handleImageClick(event) {
-    const clickedImageElement = event.target;
-    const clickedImageWrapper = clickedImageElement.parentElement;
+// 코드 클릭 처리 함수
+function handleCodeClick(event) {
+    // 클릭된 코드 컨테이너 자체를 기준으로 삼습니다.
+    const clickedWrapper = event.currentTarget;
+    const rect = clickedWrapper.getBoundingClientRect();
 
-    const wrapperRect = clickedImageWrapper.getBoundingClientRect();
-    const markerLeft = event.clientX - wrapperRect.left;
-    const markerTop = event.clientY - wrapperRect.top;
+    // 컨테이너 내의 상대적인 클릭 좌표를 계산합니다.
+    const clickX = event.clientX - rect.left;
+    const clickY = event.clientY - rect.top;
 
-    const imageRect = clickedImageElement.getBoundingClientRect();
-    const scaleX = clickedImageElement.naturalWidth / imageRect.width;
-    const scaleY = clickedImageElement.naturalHeight / imageRect.height;
-    
-    const clickX = (event.clientX - imageRect.left) * scaleX;
-    const clickY = (event.clientY - imageRect.top) * scaleY;
-    
+    // --- 오답 좌표 측정 ---
+    console.log(`x: ${Math.round(clickX)}, y: ${Math.round(clickY)}`);
+    // -------------------------
+
     const problem = currentProblem;
     let isCorrectClick = false;
+
+    // 이미 찾은 정답인지 확인하는 변수
+    let alreadyFound = false;
 
     for (const answer of problem.answers) {
         const dx = clickX - answer.x;
@@ -477,56 +494,48 @@ function handleImageClick(event) {
         if (Math.sqrt(dx * dx + dy * dy) <= answer.radius) {
             isCorrectClick = true;
             if (!answer.found) {
-                answer.found = true;
+                answer.found = true; // 정답으로 기록
                 score++;
                 
-                const wrappers = [
-                    document.getElementById('normal-image').parentElement,
-                    document.getElementById('error-image').parentElement
-                ];
-
-                wrappers.forEach(wrapper => {
-                    const targetWrapperRect = wrapper.getBoundingClientRect();
-                    const targetMarkerLeft = event.clientX - targetWrapperRect.left;
-                    const targetMarkerTop = event.clientY - targetWrapperRect.top;
-                    drawMarker(targetMarkerLeft, targetMarkerTop, 'correct', wrapper);
-                });
+                // 정답 위치에 원 그리기
+                const normalWrapper = document.getElementById('normal-code-container');
+                const errorWrapper = document.getElementById('error-code-container');
+                
+                drawMarker(answer.x, answer.y, 'correct', normalWrapper);
+                drawMarker(answer.x, answer.y, 'correct', errorWrapper);
                 
                 updateGameStats();
 
-                // --- 이 부분이 수정되었습니다! ---
+                // 모든 정답을 찾았는지 확인
                 if (score >= problem.answers.length) {
                     clearInterval(timerInterval);
-                    
-                    // 마지막 스테이지인지 확인
                     if (currentStage >= problems.length - 1) {
-                        // 마지막 스테이지라면, 바로 최종 클리어 화면으로 이동
                         setTimeout(() => showScreen("complete-screen"), 500);
                     } else {
-                        // 마지막이 아니라면, 기존처럼 단계 클리어 화면으로 이동
                         setTimeout(() => showScreen("stage-clear-screen"), 500);
                     }
                 }
-                // ------------------------------
+            } else {
+                alreadyFound = true; // 이미 찾은 정답임을 표시
             }
             break; 
         }
     }
 
-    if (!isCorrectClick) {
+    // 정답이 아니고, 이미 찾은 곳도 아닐 때만 오답으로 처리
+    if (!isCorrectClick && !alreadyFound) {
         wrongAttempts++;
-
-        // 1. 하트 이미지들을 모두 가져옵니다.
+        
+        // 하트 이미지 변경
         const hearts = document.querySelectorAll('#life-hearts img');
-        // 2. 틀린 횟수에 해당하는 하트 이미지의 src를 깨진 하트로 변경합니다.
         if (hearts[wrongAttempts - 1]) {
             hearts[wrongAttempts - 1].src = BROKEN_HEART_IMG_SRC;
         }
 
-        drawMarker(markerLeft, markerTop, 'wrong', clickedImageWrapper);
-        updateGameStats();
+        // 오답 위치에 X 표시
+        drawMarker(clickX, clickY, 'wrong', clickedWrapper);
         
-
+        // 게임 오버 확인
         if (wrongAttempts >= MAX_WRONG_ATTEMPTS) {
             clearInterval(timerInterval);
             setTimeout(() => showScreen('game-over-screen'), 500);
@@ -535,7 +544,7 @@ function handleImageClick(event) {
 }
 
 // 다음 단계로 함수
-function nextStage() {
+async function nextStage() {
     currentStage++;
     if (currentStage < problems.length) {
         loadStage(currentStage);
@@ -548,37 +557,26 @@ function nextStage() {
 // DOM이 로드된 후 실행될 코드
 document.addEventListener('DOMContentLoaded', () => {
     showScreen('start-screen');
-    document.getElementById("normal-image").addEventListener("click", handleImageClick);
-    document.getElementById("error-image").addEventListener("click", handleImageClick);
+    // 올바른 ID와 새로 만든 함수 이름으로 수정합니다.
+    document.getElementById("normal-code-container").addEventListener("click", handleCodeClick);
+    document.getElementById("error-code-container").addEventListener("click", handleCodeClick);
 });
 
 // 테스트용: 정답 위치를 미리 보여주는 함수
 function showAnswersForTesting() {
     const problem = currentProblem;
     const wrappers = [
-        document.getElementById('normal-image').parentElement,
-        document.getElementById('error-image').parentElement
+        document.getElementById('normal-code-container'),
+        document.getElementById('error-code-container')
     ];
 
     wrappers.forEach(wrapper => {
-        const img = wrapper.querySelector('img');
-        const rect = img.getBoundingClientRect();
-        if (rect.width === 0) return;
-
-        const scaleX = img.naturalWidth / rect.width;
-        const scaleY = img.naturalHeight / rect.height;
-
+        // 코드 컨테이너 기준이므로, 이미지 관련 계산 로직을 제거하고 단순화합니다.
         problem.answers.forEach(answer => {
-            const displayX = answer.x / scaleX;
-            const displayY = answer.y / scaleY;
-
-            const markerLeft = displayX + img.offsetLeft;
-            const markerTop = displayY + img.offsetTop;
-
             const hintMarker = document.createElement('div');
             hintMarker.className = 'test-answer-marker';
-            hintMarker.style.left = `${markerLeft}px`;
-            hintMarker.style.top = `${markerTop}px`;
+            hintMarker.style.left = `${answer.x}px`;
+            hintMarker.style.top = `${answer.y}px`;
             wrapper.appendChild(hintMarker);
         });
     });
