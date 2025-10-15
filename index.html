@@ -39,7 +39,7 @@
                 <span>Find: <span id="score">0/3</span></span>
                 <div id="life-hearts"></div>
             </div>
-            <button id="hint-button" onclick="showScreen('hint-screen')">힌트</button>
+            <button id="hint-button" onclick="handleHintClick()">힌트</button>
         </div>
         <div class="image-container">
             <div class="image-wrapper">
@@ -62,7 +62,7 @@
             <div class="modal-content">
                 <h2>기텍이의 조언</h2>
                 <p id="hint-text">힌트가 여기에 표시됩니다.</p>
-                <button onclick="showScreen('game-screen')">닫기</button>
+                <button onclick="closeHint()">닫기</button>
             </div>
         </div>
     </div>

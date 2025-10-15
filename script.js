@@ -10,6 +10,10 @@ let currentProblem; // 랜덤으로 선택된 현재 문제를 저장할 변수
 const HEART_IMG_SRC = 'assets/images/life_normal.PNG';
 const BROKEN_HEART_IMG_SRC = 'assets/images/life_die.PNG';
 
+// 힌트 수정
+let timeLeft = 60; // 타이머의 남은 시간을 저장할 변수
+let hintUsedThisRound = false; // 이번 라운드에 힌트를 사용했는지 여부
+
 const problems = [
     // --- 1단계 문제들 (5개) ---
     [
@@ -314,11 +318,10 @@ function showScreen(screenId) {
         div.classList.remove("active");
     });
     document.getElementById(screenId).classList.add("active");
-
-    if (screenId === 'game-screen') {
-        startGameTimer();
-    } else {
-        clearInterval(timerInterval); // 게임 화면이 아니면 타이머 중지
+    
+    // 게임 화면이 아닐 경우에만 타이머를 중지시킵니다.
+    if (screenId !== 'game-screen') {
+        clearInterval(timerInterval);
     }
 }
 
@@ -333,15 +336,41 @@ function startGame() {
 function startGameTimer() {
     if (timerInterval) clearInterval(timerInterval);
 
+    timeLeft = 60; // 새 스테이지 시작 시 시간을 60초로 초기화
+
     const timerBar = document.getElementById("timer-bar");
-    let timeLeft = 60;
-    const totalTime = 60;
+    const totalTime = 60; // 전체 시간을 변수로 지정
 
     timerBar.style.width = '100%';
     timerBar.style.backgroundColor = '#27ae60';
 
     timerInterval = setInterval(() => {
         timeLeft--;
+        // 올바른 시간 비율로 수정 (남은시간 / 전체시간 * 100)
+        timerBar.style.width = `${(timeLeft / totalTime) * 100}%`;
+
+        if (timeLeft <= 10) {
+            timerBar.style.backgroundColor = '#e74c3c';
+        }
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            showScreen('game-over-screen');
+        }
+    }, 1000);
+}
+
+// 타이머 재개 함수
+function resumeGameTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+
+    // timeLeft는 그대로 둔 채 타이머만 다시 시작
+    const timerBar = document.getElementById("timer-bar");
+    const totalTime = 60; // 전체 시간을 변수로 지정
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        // 올바른 시간 비율로 수정
         timerBar.style.width = `${(timeLeft / totalTime) * 100}%`;
 
         if (timeLeft <= 10) {
@@ -369,6 +398,10 @@ function loadStage(stageIndex) {
     // 랜덤으로 뽑은 문제를 전역 변수에 저장
     currentProblem = problem;
 
+    // 힌트 상태를 여기서 확실히 초기화합니다.
+    hintUsedThisRound = false;
+    document.getElementById('hint-button').classList.remove('disabled');
+
     renderHearts(); // 하트 추가
 
     problem.answers.forEach(ans => ans.found = false); // 정답 찾음 상태 초기화
@@ -389,6 +422,7 @@ function loadStage(stageIndex) {
     wrongAttempts = 0; // 오답 횟수 초기화
     updateGameStats(); // 점수 및 오답 횟수 UI 업데이트
 
+    startGameTimer(); // <<-- 여기서 새 타이머를 시작합니다!
 }
 
 // 점수 및 오답 횟수 UI 업데이트 함수
@@ -560,4 +594,24 @@ function renderHearts() {
         heartImg.src = HEART_IMG_SRC;
         heartsContainer.appendChild(heartImg);
     }
+}
+
+// 힌트 버튼 클릭 처리 함수
+function handleHintClick() {
+    // 이미 힌트를 사용했다면 아무것도 하지 않음
+    if (hintUsedThisRound) return;
+
+    hintUsedThisRound = true; // 힌트 사용으로 기록
+    
+    const hintButton = document.getElementById('hint-button');
+    hintButton.classList.add('disabled'); // 버튼에 비활성화 클래스 추가
+
+    clearInterval(timerInterval); // 타이머 일시정지
+    showScreen('hint-screen'); // 힌트 화면 표시
+}
+
+// 힌트 화면 닫기 처리 함수
+function closeHint() {
+    showScreen('game-screen'); // 게임 화면으로 복귀
+    resumeGameTimer(); // 타이머 다시 시작
 }
