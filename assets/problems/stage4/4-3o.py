@@ -16,10 +16,10 @@ def is_task_done(project_name, task_name):
             return task["done"]
     return False
 
-def get_user_tasks(user_name):
+def get_user_tasks(name):
     user_tasks = []
     for project in projects.values():
         for task in project:
-            if task["assignee"] == user_name and not task["done"]:
+            if task["assignee"] == name and not task["done"]:
                 user_tasks.append(task)
     return user_tasks

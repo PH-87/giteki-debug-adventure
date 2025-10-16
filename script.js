@@ -22,9 +22,9 @@ const problems = [
             normal: "assets/problems/stage1/1-1o.py",
             error: "assets/problems/stage1/1-1x.py",
             "answers": [
-            {"x": 220, "y": 140, "radius": 30},   // pages=0
-            {"x": 240, "y": 260, "radius": 30},   // 평균식 len(books)-1
-            {"x": 200, "y": 340, "radius": 30}    // "다섯 권"
+            {"x": 275, "y": 58, "radius": 30},
+            {"x": 250, "y": 167, "radius": 30},
+            {"x": 148, "y": 238, "radius": 30}
             ],
             "hint": "pages 값이 0, 평균 계산식 분모 오류, 재고 수가 문자열입니다."
         },
@@ -33,9 +33,9 @@ const problems = [
             normal: "assets/problems/stage1/1-2o.py",
             error: "assets/problems/stage1/1-2x.py",
             "answers": [
-            {"x": 220, "y": 140, "radius": 30},   // quantity=-3
-            {"x": 240, "y": 240, "radius": 30},   // 배송비 문자열
-            {"x": 220, "y": 320, "radius": 30}    // 할인율 1.2
+            {"x": 337, "y": 56, "radius": 30},
+            {"x": 173, "y": 219, "radius": 30},
+            {"x": 138, "y": 310, "radius": 30}
             ],
             "hint": "주문 수량이 음수, 배송비가 문자열, 할인율 값이 1 이상입니다."
         },
@@ -44,9 +44,9 @@ const problems = [
             normal: "assets/problems/stage1/1-3o.py",
             error: "assets/problems/stage1/1-3x.py",
             "answers": [
-            {"x": 220, "y": 140, "radius": 30},   // 999 온도
-            {"x": 240, "y": 200, "radius": 30},   // wind에 문자열
-            {"x": 220, "y": 280, "radius": 30}    // 평균식 분모 +2
+            {"x": 254, "y": 40, "radius": 30},
+            {"x": 158, "y": 78, "radius": 30},
+            {"x": 240, "y": 165, "radius": 30}
             ],
             "hint": "온도 값이 비정상, 풍속 데이터에 문자열, 평균 계산식 분모가 잘못되었습니다."
         },
@@ -55,9 +55,9 @@ const problems = [
             normal: "assets/problems/stage1/1-4o.py",
             error: "assets/problems/stage1/1-4x.py",
             "answers": [
-            {"x": 220, "y": 140, "radius": 30},   // balance 음수
-            {"x": 240, "y": 220, "radius": 30},   // deposit에 문자열
-            {"x": 220, "y": 300, "radius": 30}    // 평균식 분모 -2
+            {"x": 263, "y": 58, "radius": 30},
+            {"x": 285, "y": 202, "radius": 30},
+            {"x": 266, "y": 292, "radius": 30}
             ],
             "hint": "잔액이 음수, 입금 금액이 문자열, 평균 계산식 분모가 잘못되었습니다."
         },
@@ -66,9 +66,9 @@ const problems = [
             normal: "assets/problems/stage1/1-5o.py",
             error: "assets/problems/stage1/1-5x.py",
             "answers": [
-            {"x": 220, "y": 140, "radius": 30},   // rating=6.5
-            {"x": 240, "y": 240, "radius": 30},   // add_rating에 'A'
-            {"x": 220, "y": 320, "radius": 30}    // 평균식 분모 +1
+            {"x": 245, "y": 60, "radius": 30},
+            {"x": 270, "y": 272, "radius": 30},
+            {"x": 245, "y": 365, "radius": 30}
             ],
             "hint": "평점이 5를 초과, 평점에 문자열 입력, 평균 계산식 분모가 잘못되었습니다."
         }
@@ -81,9 +81,9 @@ const problems = [
             normal: "assets/problems/stage2/2-1o.py",
             error: "assets/problems/stage2/2-1x.py",
             "answers": [
-            {"x": 380, "y": 80, "radius": 30},
-            {"x": 250, "y": 180, "radius": 30},
-            {"x": 200, "y": 240, "radius": 30}
+            {"x": 315, "y": 39, "radius": 30},
+            {"x": 170, "y": 166, "radius": 30},
+            {"x": 128, "y": 258, "radius": 30}
             ],
             "hint": "점수 타입 오류, 평균 계산식의 분모 오류, 등급 조건식의 경계 값 오류입니다."
         },
@@ -92,9 +92,9 @@ const problems = [
             normal: "assets/problems/stage2/2-2o.py",
             error: "assets/problems/stage2/2-2x.py",
             "answers": [
-            {"x": 320, "y": 60, "radius": 30},
-            {"x": 200, "y": 160, "radius": 30},
-            {"x": 320, "y": 220, "radius": 30}
+            {"x": 272, "y": 21, "radius": 30},
+            {"x": 137, "y": 130, "radius": 30},
+            {"x": 191, "y": 221, "radius": 30}
             ],
             "hint": "초기 재고 데이터 오류, 함수 반환 값 오류, 재고 업데이트 로직 오류입니다."
         },
@@ -103,9 +103,9 @@ const problems = [
             normal: "assets/problems/stage2/2-3o.py",
             error: "assets/problems/stage2/2-3x.py",
             "answers": [
-            {"x": 420, "y": 100, "radius": 30},
-            {"x": 180, "y": 160, "radius": 30},
-            {"x": 240, "y": 240, "radius": 30}
+            {"x": 327, "y": 58, "radius": 30},
+            {"x": 98, "y": 168, "radius": 30},
+            {"x": 138, "y": 294, "radius": 30}
             ],
             "hint": "연령 제한 데이터 타입 오류, 나이 비교 조건식 오류, 총 금액 계산식 오류입니다."
         },
@@ -114,9 +114,9 @@ const problems = [
             normal: "assets/problems/stage2/2-4o.py",
             error: "assets/problems/stage2/2-4x.py",
             "answers": [
-            {"x": 340, "y": 120, "radius": 30},
-            {"x": 460, "y": 140, "radius": 30},
-            {"x": 300, "y": 240, "radius": 30}
+            {"x": 227, "y": 74, "radius": 30},
+            {"x": 328, "y": 112, "radius": 30},
+            {"x": 182, "y": 258, "radius": 30}
             ],
             "hint": "계좌 잔액 데이터 오류, 이자율 데이터 타입 오류, 최종 잔액 업데이트 로직 오류입니다."
         },
@@ -125,9 +125,9 @@ const problems = [
             normal: "assets/problems/stage2/2-5o.py",
             error: "assets/problems/stage2/2-5x.py",
             "answers": [
-            {"x": 340, "y": 80, "radius": 30},
-            {"x": 250, "y": 180, "radius": 30},
-            {"x": 280, "y": 260, "radius": 30}
+            {"x": 261, "y": 55, "radius": 30},
+            {"x": 199, "y": 185, "radius": 30},
+            {"x": 182, "y": 349, "radius": 30}
             ],
             "hint": "운동 시간 데이터 타입 오류, 함수 내 변수 할당 오류, 총 칼로리 누적 로직 오류입니다."
         }
@@ -140,20 +140,20 @@ const problems = [
             normal: "assets/problems/stage3/3-1o.py",
             error: "assets/problems/stage3/3-1x.py",
             "answers": [
-            {"x": 380, "y": 80, "radius": 30},
-            {"x": 260, "y": 180, "radius": 30},
-            {"x": 240, "y": 220, "radius": 30}
+            {"x": 255, "y": 57, "radius": 30},
+            {"x": 176, "y": 239, "radius": 30},
+            {"x": 305, "y": 292, "radius": 30}
             ],
-            "hint": "데이터의 타입, 계산식의 연산자를 비교문으로, 함수의 인자 순서가 잘못되었습니다."
+            "hint": "데이터의 타입, 계산식의 연산자를 비교문으로, 이상한 함수 인자가 있습니다."
         },
         {
             "stage": 3,
             normal: "assets/problems/stage3/3-2o.py",
             error: "assets/problems/stage3/3-2x.py",
             "answers": [
-            {"x": 420, "y": 100, "radius": 30},
-            {"x": 260, "y": 240, "radius": 30},
-            {"x": 280, "y": 300, "radius": 30}
+            {"x": 313, "y": 77, "radius": 30},
+            {"x": 200, "y": 310, "radius": 30},
+            {"x": 175, "y": 398, "radius": 30}
             ],
             "hint": "비정상적인 데이터 값, 리스트에 값을 추가하는 로직, 조건문의 비교 연산자가 잘못되었습니다."
         },
@@ -162,9 +162,9 @@ const problems = [
             normal: "assets/problems/stage3/3-3o.py",
             error: "assets/problems/stage3/3-3x.py",
             "answers": [
-            {"x": 450, "y": 80, "radius": 30},
-            {"x": 260, "y": 240, "radius": 30},
-            {"x": 280, "y": 280, "radius": 30}
+            {"x": 302, "y": 58, "radius": 30},
+            {"x": 218, "y": 328, "radius": 30},
+            {"x": 171, "y": 401, "radius": 30}
             ],
             "hint": "데이터의 타입, 계산식의 나눗셈 로직, 조건문의 비교 연산자가 잘못되었습니다."
         },
@@ -173,9 +173,9 @@ const problems = [
             normal: "assets/problems/stage3/3-4o.py",
             error: "assets/problems/stage3/3-4x.py",
             "answers": [
-            {"x": 520, "y": 40, "radius": 30},
-            {"x": 280, "y": 140, "radius": 30},
-            {"x": 300, "y": 220, "radius": 30}
+            {"x": 389, "y": 37, "radius": 30},
+            {"x": 175, "y": 186, "radius": 30},
+            {"x": 211, "y": 310, "radius": 30}
             ],
             "hint": "딕셔너리의 키 이름 오타, 가격 비교 연산자, 상태 값의 데이터 타입이 잘못되었습니다."
         },
@@ -184,9 +184,9 @@ const problems = [
             normal: "assets/problems/stage3/3-5o.py",
             error: "assets/problems/stage3/3-5x.py",
             "answers": [
-            {"x": 420, "y": 120, "radius": 30},
-            {"x": 280, "y": 180, "radius": 30},
-            {"x": 380, "y": 260, "radius": 30}
+            {"x": 333, "y": 112, "radius": 30},
+            {"x": 177, "y": 183, "radius": 30},
+            {"x": 222, "y": 327, "radius": 30}
             ],
             "hint": "초기 데이터 값 누락, 조건문의 비교 연산자, 계산식의 연산자가 잘못되었습니다."
         }
@@ -199,9 +199,9 @@ const problems = [
             normal: "assets/problems/stage4/4-1o.py",
             error: "assets/problems/stage4/4-1x.py",
             "answers": [
-            {"x": 480, "y": 80, "radius": 30},
-            {"x": 280, "y": 220, "radius": 30},
-            {"x": 280, "y": 300, "radius": 30}
+            {"x": 363, "y": 74, "radius": 30},
+            {"x": 176, "y": 310, "radius": 30},
+            {"x": 175, "y": 455, "radius": 30}
             ],
             "hint": "데이터의 타입, 재고 누적 로직, 함수의 반환 값 계산식이 잘못되었습니다."
         },
@@ -210,9 +210,9 @@ const problems = [
             normal: "assets/problems/stage4/4-2o.py",
             error: "assets/problems/stage4/4-2x.py",
             "answers": [
-            {"x": 460, "y": 140, "radius": 30},
-            {"x": 400, "y": 200, "radius": 30},
-            {"x": 280, "y": 280, "radius": 30}
+            {"x": 336, "y": 130, "radius": 30},
+            {"x": 358, "y": 238, "radius": 30},
+            {"x": 296, "y": 381, "radius": 30}
             ],
             "hint": "데이터의 타입, 리스트에 값을 추가하는 로직, 합산 시 잘못된 값을 더하는 로직이 있습니다."
         },
@@ -221,9 +221,9 @@ const problems = [
             normal: "assets/problems/stage4/4-3o.py",
             error: "assets/problems/stage4/4-3x.py",
             "answers": [
-            {"x": 450, "y": 200, "radius": 30},
-            {"x": 280, "y": 260, "radius": 30},
-            {"x": 240, "y": 360, "radius": 30}
+            {"x": 305, "y": 166, "radius": 30},
+            {"x": 147, "y": 276, "radius": 30},
+            {"x": 174, "y": 453, "radius": 30}
             ],
             "hint": "리스트의 범위를 벗어난 인덱스, 딕셔너리의 잘못된 키, 함수의 반환 값이 잘못되었습니다."
         },
@@ -232,9 +232,9 @@ const problems = [
             normal: "assets/problems/stage4/4-4o.py",
             error: "assets/problems/stage4/4-4x.py",
             "answers": [
-            {"x": 580, "y": 80, "radius": 30},
-            {"x": 300, "y": 220, "radius": 30},
-            {"x": 80, "y": 290, "radius": 30}
+            {"x": 350, "y": 94, "radius": 30},
+            {"x": 189, "y": 292, "radius": 30},
+            {"x": 71, "y": 419, "radius": 30}
             ],
             "hint": "데이터의 타입, 데미지 계산식의 연산자, 공격 대상 변수가 잘못되었습니다."
         },
@@ -243,9 +243,9 @@ const problems = [
             normal: "assets/problems/stage4/4-5o.py",
             error: "assets/problems/stage4/4-5x.py",
             "answers": [
-            {"x": 480, "y": 80, "radius": 30},
-            {"x": 350, "y": 180, "radius": 30},
-            {"x": 350, "y": 280, "radius": 30}
+            {"x": 129, "y": 94, "radius": 30},
+            {"x": 242, "y": 274, "radius": 30},
+            {"x": 246, "y": 434, "radius": 30}
             ],
             "hint": "데이터의 타입, 리스트에 값을 추가하는 로직, 집계 시 초기 카운트 값이 잘못되었습니다."
         }
@@ -258,9 +258,9 @@ const problems = [
             normal: "assets/problems/stage5/5-1o.py",
             error: "assets/problems/stage5/5-1x.py",
             "answers": [
-            {"x": 300, "y": 220, "radius": 30},
-            {"x": 660, "y": 380, "radius": 30},
-            {"x": 680, "y": 500, "radius": 30}
+            {"x": 200, "y": 130, "radius": 30},
+            {"x": 306, "y": 292, "radius": 30},
+            {"x": 360, "y": 400, "radius": 30}
             ],
             "hint": "데이터 포함 여부 확인 로직, 합산하는 데이터의 범위, 특정 조건문의 논리 연산자가 잘못되었습니다."
         },
@@ -269,9 +269,9 @@ const problems = [
             normal: "assets/problems/stage5/5-2o.py",
             error: "assets/problems/stage5/5-2x.py",
             "answers": [
-            {"x": 420, "y": 200, "radius": 30},
-            {"x": 580, "y": 340, "radius": 30},
-            {"x": 560, "y": 500, "radius": 30}
+            {"x": 279, "y": 113, "radius": 30},
+            {"x": 335, "y": 238, "radius": 30},
+            {"x": 239, "y": 366, "radius": 30}
             ],
             "hint": "능력치 계산의 기준 변수, 리스트 필터링 조건, 피해량 계산식의 연산자가 잘못되었습니다."
         },
@@ -280,9 +280,9 @@ const problems = [
             normal: "assets/problems/stage5/5-3o.py",
             error: "assets/problems/stage5/5-3x.py",
             "answers": [
-            {"x": 500, "y": 180, "radius": 30},
-            {"x": 280, "y": 320, "radius": 30},
-            {"x": 260, "y": 440, "radius": 30}
+            {"x": 107, "y": 131, "radius": 30},
+            {"x": 212, "y": 239, "radius": 30},
+            {"x": 179, "y": 401, "radius": 30}
             ],
             "hint": "규칙 적용 시 조건문의 논리 연산자, 문자열을 만드는 데 사용된 변수, 딕셔너리의 키로 사용된 값이 잘못되었습니다."
         },
@@ -291,20 +291,20 @@ const problems = [
             normal: "assets/problems/stage5/5-4o.py",
             error: "assets/problems/stage5/5-4x.py",
             "answers": [
-            {"x": 580, "y": 140, "radius": 30},
-            {"x": 460, "y": 340, "radius": 30},
-            {"x": 440, "y": 420, "radius": 30}
+            {"x": 333, "y": 75, "radius": 30},
+            {"x": 289, "y": 310, "radius": 30},
+            {"x": 383, "y": 400, "radius": 30}
             ],
-            "hint": "최저점을 제외하는 조건, 평균을 계산하는 분모, 최종 성적을 환산하는 계산식이 잘못되었습니다."
+            "hint": "최저점을 제외하는 조건, 평균은 나누기로 구해야한다, 최종 성적을 환산하는 계산식이 잘못되었습니다."
         },
         {
             "stage": 5,
             normal: "assets/problems/stage5/5-5o.py",
             error: "assets/problems/stage5/5-5x.py",
             "answers": [
-            {"x": 400, "y": 180, "radius": 30},
-            {"x": 580, "y": 340, "radius": 30},
-            {"x": 280, "y": 420, "radius": 30}
+            {"x": 325, "y": 96, "radius": 30},
+            {"x": 118, "y": 309, "radius": 30},
+            {"x": 167, "y": 383, "radius": 30}
             ],
             "hint": "비용 계산식의 연산자, 총 거리를 합산하는 데이터의 범위, 최적 경로를 선택하는 비교 연산자가 잘못되었습니다."
         }
@@ -392,10 +392,8 @@ async function loadStage(stageIndex) { // 'async' 추가
     const stageProblems = problems[stageIndex];
     
     // 2. 해당 묶음에서 문제 하나를 무작위로 선택합니다.
-    // random
-    // const randomIndex = Math.floor(Math.random() * stageProblems.length);
-    // const problem = stageProblems[randomIndex];
-    const problem = stageProblems[0];
+    const randomIndex = Math.floor(Math.random() * stageProblems.length);
+    const problem = stageProblems[randomIndex];
 
     // 랜덤으로 뽑은 문제를 전역 변수에 저장
     currentProblem = problem;
@@ -426,10 +424,10 @@ async function loadStage(stageIndex) { // 'async' 추가
     
     // 3. Prism.js를 실행하여 코드를 하이라이팅합니다.
     Prism.highlightAll();
-    // ------------------------------------
+
 
     // 테스트용 정답 표시 기능 (코드가 렌더링 된 후 실행)
-    showAnswersForTesting();
+    // showAnswersForTesting();
 
     document.getElementById("stage-display").textContent = `Stage ${problem.stage}`;
     document.getElementById("hint-text").textContent = problem.hint;
@@ -476,10 +474,6 @@ function handleCodeClick(event) {
     // 컨테이너 내의 상대적인 클릭 좌표를 계산합니다.
     const clickX = event.clientX - rect.left;
     const clickY = event.clientY - rect.top;
-
-    // --- 오답 좌표 측정 ---
-    console.log(`x: ${Math.round(clickX)}, y: ${Math.round(clickY)}`);
-    // -------------------------
 
     const problem = currentProblem;
     let isCorrectClick = false;
@@ -532,8 +526,12 @@ function handleCodeClick(event) {
             hearts[wrongAttempts - 1].src = BROKEN_HEART_IMG_SRC;
         }
 
-        // 오답 위치에 X 표시
-        drawMarker(clickX, clickY, 'wrong', clickedWrapper);
+        // 오답 위치에 X 표시 (양쪽에 모두)
+        const normalWrapper = document.getElementById('normal-code-container');
+        const errorWrapper = document.getElementById('error-code-container');
+        
+        drawMarker(clickX, clickY, 'wrong', normalWrapper);
+        drawMarker(clickX, clickY, 'wrong', errorWrapper);
         
         // 게임 오버 확인
         if (wrongAttempts >= MAX_WRONG_ATTEMPTS) {

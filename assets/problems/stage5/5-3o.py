@@ -9,16 +9,16 @@ def get_destination_folder(file_info, rules):
             
     return "unsorted"
 
-def generate_new_filepath(file_info, destination_folder):
+def new_path(file_info, destination_folder):
     filename = file_info['name']
     
-    return f"/home/user/downloads/{destination_folder}/{filename}"
+    return f"/downloads/{destination_folder}/{filename}"
 
 def create_move_plan(file_list, rules):
     move_plan = {}
     for file_obj in file_list:
         destination = get_destination_folder(file_obj, rules)
 
-        move_plan[file_obj] = generate_new_filepath(file_obj, destination)
+        move_plan[file_obj] = new_path(file_obj, destination)
         
     return move_plan

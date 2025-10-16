@@ -11,7 +11,7 @@ def reconcile_transactions(bank_statement, int_ledger):
             
     return matched_records, discrepancies
 
-def cleared_balance(transactions, start_balance=1000000):
+def cleared_balance(transactions, start_balance=10000):
     cleared_total = sum(tx['amount'] for tx in transactions 
                         if tx['status'] == 'CLEARED')
     final_balance = start_balance + cleared_total
@@ -19,6 +19,6 @@ def cleared_balance(transactions, start_balance=1000000):
 
 def flag_suspicious_activity(transactions):
     suspic_txns = [tx for tx in transactions 
-                       if tx['amount'] > 1000000 and tx['is_intl']]
+                       if tx['amount'] > 10000 and tx['is_intl']]
     print(f"총 {len(suspic_txns)}건의 의심 거래가 발견되었습니다.")
     return suspic_txns

@@ -1,7 +1,7 @@
 inventory = {
     "electronics": [
         {"id": "E01", "name": "노트북", "stock": 10},
-        {"id": "E02", "name": "마우스", "stock": "50"}],   # ❌ 오류 1: 재고가 문자열
+        {"id": "E02", "name": "마우스", "stock": "50"}],
     "books": [ {"id": "B01", "name": "파이썬", "stock": 50} ]}
 
 def find_item(item_id):
@@ -14,7 +14,7 @@ def find_item(item_id):
 def restock(item_id, quantity):
     item = find_item(item_id)
     if item:
-        item["stock"] = quantity      # ❌ 오류 2: 재고를 더하지 않고 덮어씀
+        item["stock"] = quantity
     return item
 
 def get_category_stock(category_name):
@@ -22,4 +22,4 @@ def get_category_stock(category_name):
     items = inventory[category_name]
     for item in items:
         total += item["stock"]
-    return total / len(items)         # ❌ 오류 3: 총 재고가 아닌 평균 재고를 반환
+    return total / len(items)
