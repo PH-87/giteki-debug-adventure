@@ -336,10 +336,10 @@ async function startGame() {
 function startGameTimer() {
     if (timerInterval) clearInterval(timerInterval);
 
-    timeLeft = 60; // 새 스테이지 시작 시 시간을 60초로 초기화
+    timeLeft = 30; // 새 스테이지 시작 시 시간 초기화
 
     const timerBar = document.getElementById("timer-bar");
-    const totalTime = 60; // 전체 시간을 변수로 지정
+    const totalTime = 30; // 전체 시간을 변수로 지정
 
     timerBar.style.width = '100%';
     timerBar.style.backgroundColor = '#27ae60';
@@ -366,7 +366,7 @@ function resumeGameTimer() {
 
     // timeLeft는 그대로 둔 채 타이머만 다시 시작
     const timerBar = document.getElementById("timer-bar");
-    const totalTime = 60; // 전체 시간을 변수로 지정
+    const totalTime = 30; // 전체 시간을 변수로 지정
 
     timerInterval = setInterval(() => {
         timeLeft--;
@@ -429,7 +429,7 @@ async function loadStage(stageIndex) { // 'async' 추가
     // 테스트용 정답 표시 기능 (코드가 렌더링 된 후 실행)
     // showAnswersForTesting();
 
-    document.getElementById("stage-display").textContent = `Stage ${problem.stage}`;
+    document.getElementById("stage-display").textContent = `STAGE ${problem.stage}`;
     document.getElementById("hint-text").textContent = problem.hint;
 
     score = 0;

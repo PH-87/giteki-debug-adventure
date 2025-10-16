@@ -15,7 +15,6 @@ body {
 }
 
 /* 모든 화면을 기본적으로 숨김 */
-/* 모든 화면을 기본적으로 숨김 */
 body > div {
     display: none;
     box-sizing: border-box;
@@ -76,13 +75,20 @@ button:active {
     align-items: center;
     width: 100%;
     max-width: 900px;
-    padding: 0 10px;
+    padding: 0px 10px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    border: 2px solid #bdc3c7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함시켜 레이아웃 유지 */
 }
 
 .score-info {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* 가로(row) 정렬 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    gap: 60px;           /* 각 항목 사이의 간격 추가 */
+    font-size: 24px;
 }
 
 .image-container {
@@ -113,16 +119,23 @@ button:active {
     border-radius: 8px;
     margin-top: 10px;
 }
+/* 코드 박스(image-wrapper) 안의 h3 태그 스타일 수정 */
+.image-wrapper h3 {
+    margin-top: 5px;    /* 위쪽 여백 줄이기 */
+    margin-bottom: 10px; /* 아래쪽 여백은 그대로 유지 (또는 원하는 값으로 조절) */
+    font-size: 20px;
+}
 
 .timer-container {
     width: 90%;
     max-width: 900px;
-    height: 20px;
+    height: 30px;
     background-color: #ecf0f1;
     border-radius: 10px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     overflow: hidden;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #596776; /* 어두운 회색 외곽선 추가 */
 }
 
 #timer-bar {
@@ -302,4 +315,48 @@ button:active {
     box-sizing: border-box;
     overflow: auto !important; /* 스크롤 기능을 여기서 담당! */
     font-size: 12px; /* 코드의 글자 크기 */
+}
+
+/* 힌트, 닫기, 다음 단계 버튼 색상 변경 */
+#hint-button,
+#hint-screen button,
+#stage-clear-screen button,
+#game-over-screen button,
+#complete-screen button{
+    background-color: #1e8348; /* 원하는 기본 색상 (예: 초록색) */
+    border: none;
+    border: 2px solid #0d4123; /* 2px 두께의 진한 초록색 테두리 추가 */
+}
+
+/* 위 버튼들에 마우스를 올렸을 때 색상 변경 */
+#hint-button:hover,
+#hint-screen button:hover,
+#stage-clear-screen button:hover {
+    background-color: #1e8348; /* 더 진한 색상 */
+    border: 2px solid #0d4123;
+}
+
+/* 정보 화면 박스 스타일 */
+.modal-box {
+    width: 90%;
+    max-width: 600px; /* 박스의 최대 가로 넓이 */
+    background-color: #ecf0f1; /* 코드 블록과 같은 배경색 */
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 글씨 스타일 */
+.modal-box h2 {
+    margin-top: 5px;    /* 위쪽 여백 줄이기 */
+    margin-bottom: 20px; /* 아래쪽 여백은 그대로 유지 (또는 원하는 값으로 조절) */
+    font-size: 30px;
+}
+
+/* 스테이지 표시 오른쪽에 여백 추가 */
+#stage-display {
+    margin-right: 30px; /* 원하는 만큼 여백 크기 조절 */
 }

@@ -23,21 +23,23 @@
 
     <!-- 게임 방법 화면 -->
     <div id="howto-screen" class="hidden">
-        <h2>게임 방법</h2>
-        <p>💚 각 화면의 <strong>오류 이미지</strong>에서 차이(오류)를 찾아 터치하세요.<br><br>
-            💚 노말/에러 둘 다 누를 수 있으며, 틀린 곳을 누르면 ❌ 정답을 누르면 ⭕️ 가 표시됩니다.<br><br>
-            💚 <strong>60초</strong>의 제한시간이 있으니 시간 안에 오류를 찾아 기텍이를 도와주세요!<br><br>
-            💚 단계를 끝까지 클리어하지 못하였더라도 상품이 있으기 많은 기대 부탁드립니다.
-        </p>
-        <img src="assets/images/game_start_btn.png" alt="게임 시작" class="button-image" onclick="startGame()">
+        <div class="modal-box">
+            <h2>게임 방법</h2>
+            <p>💚 각 화면의 <strong>오류 이미지</strong>에서 차이(오류)를 찾아 터치하세요.<br><br>
+                💚 노말/에러 둘 다 누를 수 있으며, 틀린 곳을 누르면 ❌ 정답을 누르면 ⭕️ 가 표시됩니다.<br><br>
+                💚 <strong>60초</strong>의 제한시간이 있으니 시간 안에 오류를 찾아 기텍이를 도와주세요!<br><br>
+                💚 단계를 끝까지 클리어하지 못하였더라도 상품이 있으기 많은 기대 부탁드립니다.
+            </p>
+            <img src="assets/images/game_start_btn.png" alt="게임 시작" class="button-image" onclick="startGame()">
+        </div>
     </div>
 
     <!-- 게임 화면 -->
     <div id="game-screen" class="hidden">
         <div class="header">
             <div class="score-info">
-                <span id="stage-display">Stage 1</span> 
-                <span>Find: <span id="score">0/3</span></span>
+                <span id="stage-display">STAGE 1</span> 
+                <span>FIND: <span id="score">0 / 3</span></span>
                 <div id="life-hearts"></div>
             </div>
             <button id="hint-button" onclick="handleHintClick()">힌트</button>
@@ -70,23 +72,29 @@
 
     <!-- 스테이지 클리어 화면 -->
     <div id="stage-clear-screen" class="hidden">
-        <h2>Stage Clear!</h2>
-        <p>축하합니다!</p>
-        <button onclick="nextStage()">다음 단계</button>
+        <div class="modal-box">
+            <h2>Stage Clear!</h2>
+            <p>축하합니다!</p>
+            <button onclick="nextStage()">다음 단계</button>
+        </div>
     </div>
 
     <!-- 게임 클리어 화면 -->
     <div id="complete-screen" class="hidden">
-        <h2>모든 스테이지 클리어 🎉</h2>
-        <p>부스에 와주셔서 감사합니다! 스태프에게 상품을 받으세요.</p>
-        <button onclick="showScreen('start-screen')">처음으로</button>
+        <div class="modal-box">
+            <h2>모든 스테이지 클리어 🎉</h2>
+            <p>부스에 와주셔서 감사합니다! 스태프에게 상품을 받으세요.</p>
+            <button onclick="showScreen('start-screen')">처음으로</button>
+        </div>
     </div>
 
     <!-- 게임 오버 화면 -->
     <div id="game-over-screen" class="hidden">
-    <h2>게임 오버 😢 </h2>
-    <p>참여해주셔서 감사합니다!!</p>
-    <button onclick="showScreen('start-screen')">처음으로</button>
+        <div class="modal-box">
+            <h2>게임 오버 😢 </h2>
+            <p>참여해주셔서 감사합니다!!</p>
+            <button onclick="showScreen('start-screen')">처음으로</button>
+        </div>
     </div>
 
 
