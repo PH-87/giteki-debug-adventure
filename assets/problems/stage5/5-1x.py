@@ -13,7 +13,7 @@ def reconcile_transactions(bank_statement, int_ledger):
 
 def cleared_balance(transactions, start_balance=10000):
     cleared_total = sum(tx['amount'] for tx in transactions 
-                        if tx['status'] != 'PENDING')
+                        if tx['status'] != 'CLEARED')
     final_balance = start_balance + cleared_total
     return final_balance
 
