@@ -9,7 +9,6 @@
 </head>
 <body>
     <!-- 시작 화면 -->
-    </div>
     <div id="start-screen" class="active">
     <img src="assets/images/logo.png" alt="게임 로고" class="logo-image">
 
@@ -98,7 +97,15 @@
     </div>
 
 
-    <!-- JS 파일 연결 -->
+    <!-- 오디오 파일, JS 파일 연결 -->
+    <audio id="bgm" src="assets/sounds/bgm.mp3" loop preload="auto"></audio>
+    <audio id="sound-correct" src="assets/sounds/correct.mp3" preload="auto"></audio>
+    <audio id="sound-wrong" src="assets/sounds/wrong.mp3" preload="auto"></audio>
+    <!--
+    Music by Tunetank from Pixabay
+    Sound Effect by Crunchpix Studio from Pixabay
+    -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script> 
     <script src="./script.js"></script>

@@ -38,10 +38,6 @@ body > div.active {
     gap: 20px;
 }
 
-.hidden {
-    display: none;
-}
-
 h1, h2, h3 {
     color: #2c3e50;
     margin-bottom: 10px;
@@ -75,7 +71,7 @@ button:active {
     align-items: center;
     width: 100%;
     max-width: 900px;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 40px;
     background-color: #ecf0f1;
     border-radius: 10px;
     border: 2px solid #bdc3c7;
@@ -87,7 +83,7 @@ button:active {
     display: flex;
     flex-direction: row; /* 가로(row) 정렬 */
     align-items: center; /* 세로축 중앙 정렬 */
-    gap: 60px;           /* 각 항목 사이의 간격 추가 */
+    gap: 62px;           /* 각 항목 사이의 간격 추가 */
     font-size: 24px;
 }
 
@@ -111,6 +107,7 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* 자식 요소의 absolute 위치를 위한 기준 */
 }
 
 .image-wrapper img {
@@ -164,11 +161,6 @@ button:active {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* 클릭 위치 표시를 위한 스타일 (기존 코드 유지 및 일부 수정) */
-.image-wrapper {
-    position: relative; /* 자식 요소의 absolute 위치를 위한 기준 */
 }
 
 .click-indicator {
@@ -356,7 +348,4 @@ button:active {
     font-size: 30px;
 }
 
-/* 스테이지 표시 오른쪽에 여백 추가 */
-#stage-display {
-    margin-right: 30px; /* 원하는 만큼 여백 크기 조절 */
-}
+
