@@ -342,7 +342,7 @@ button:active {
 /* 정보 화면 박스 스타일 */
 .modal-box {
     width: 90%;
-    max-width: 600px; /* 박스의 최대 가로 넓이 */
+    max-width: 700px; /* 박스의 최대 가로 넓이 */
     background-color: #ecf0f1; /* 코드 블록과 같은 배경색 */
     border: 2px solid #bdc3c7;
     border-radius: 10px;
@@ -356,7 +356,7 @@ button:active {
 .modal-box h2 {
     margin-top: 5px;    /* 위쪽 여백 줄이기 */
     margin-bottom: 20px; /* 아래쪽 여백은 그대로 유지 (또는 원하는 값으로 조절) */
-    font-size: 30px;
+    font-size: 40px;
 }
 
 
