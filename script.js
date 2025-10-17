@@ -287,7 +287,7 @@ function handleCodeClick(event) {
 async function nextStage() {
     currentStage++;
     if (currentStage < problems.length) {
-        loadStage(currentStage);
+        await loadStage(currentStage); // await 추가
         showScreen("game-screen");
     } else {
         showScreen("complete-screen");
