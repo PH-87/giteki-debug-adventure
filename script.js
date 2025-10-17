@@ -262,10 +262,20 @@ function handleCodeClick(event) {
     sound.currentTime = 0;
     sound.play();
     
-    // 하트 이미지 변경
+    // 하트 이미지 변경 및 애니메이션
     const hearts = document.querySelectorAll('#life-hearts img');
-    if (hearts[wrongAttempts - 1]) {
-        hearts[wrongAttempts - 1].src = BROKEN_HEART_IMG_SRC;
+    const targetHeart = hearts[wrongAttempts - 1]; // 변경될 하트
+
+    if (targetHeart) {
+        // 1. 하트에 shake 클래스를 추가하여 애니메이션을 시작합니다.
+        targetHeart.classList.add('shake');
+
+        // 2. 애니메이션이 끝난 후(0.5초 뒤) 이미지를 바꾸고,
+        //    다음에도 애니메이션이 작동하도록 클래스를 제거합니다.
+        setTimeout(() => {
+            targetHeart.src = BROKEN_HEART_IMG_SRC;
+            targetHeart.classList.remove('shake');
+        }, 500); // 500ms = 0.5초 (CSS 애니메이션 시간과 일치)
     }
 
     // 오답 위치에 X 표시 (양쪽에 모두)

@@ -284,6 +284,17 @@ button:active {
     width: 55px;   /* 하트 너비 (원하는 크기로 조절) */
     height: auto;  /* 높이는 비율에 맞게 자동 조절 */
 }
+/* 하트가 흔들리는 애니메이션 효과 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+/* 흔들림 애니메이션을 적용할 클래스 */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
 
 /* 비활성화된 힌트 버튼 스타일 */
 #hint-button.disabled {
