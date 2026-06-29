@@ -26,22 +26,18 @@
 
 # 🚀 Project Journey
 
-<table>
+
+<table width="100%">
 <tr>
 
-<td align="center">
-<img src="images/booth_plan.png" width="95%"><br>
-<b>부스 기획</b>
+<td align="center" width="50%">
+<img src="images/co_show_poster1.png" height="420"><br><br>
+<b>CO-SHOW Poster</b>
 </td>
 
-<td align="center">
-<img src="images/co_show_poster1.png" width="95%"><br>
-<b>SNS 홍보 포스터</b>
-</td>
-
-<td align="center">
-<img src="images/co_show_poster2.png" width="95%"><br>
-<b>행사 홍보</b>
+<td align="center" width="50%">
+<img src="images/co_show_poster2.png" height="420"><br><br>
+<b>Booth Promotion</b>
 </td>
 
 </tr>
@@ -60,18 +56,26 @@
 
 ---
 
+## 📝 Booth Planning
+
+부스 기획안 전문은 아래 문서에서 확인할 수 있습니다.
+
+📄 [Booth Planning Document](./docs/booth_plan.docx)
+
+---
+
 # 🎮 Game Screen
 
-<table>
+<table width="100%">
 <tr>
 
-<td align="center">
-<img src="images/logo.png" width="100%"><br>
+<td align="center" width="50%">
+<img src="images/logo.png" height="320"><br><br>
 <b>Main Screen</b>
 </td>
 
-<td align="center">
-<img src="images/game_play.png" width="100%"><br>
+<td align="center" width="50%">
+<img src="images/game_play.png" height="320"><br><br>
 <b>Game Play</b>
 </td>
 
@@ -124,28 +128,25 @@
 
 # 🎪 CO-SHOW Booth
 
-<table>
-
+<table width="100%">
 <tr>
 
-<td align="center">
-<img src="images/booth1.jpg" width="100%">
+<td align="center" width="33%">
+<img src="images/booth1.jpg" height="280"><br><br>
+<b>Booth Display</b>
 </td>
 
-<td align="center">
-<img src="images/booth2.jpg" width="100%">
+<td align="center" width="33%">
+<img src="images/booth2.jpg" height="280"><br><br>
+<b>Booth Sign</b>
+</td>
+
+<td align="center" width="33%">
+<img src="images/booth3.jpg" height="280"><br><br>
+<b>Visitor Experience</b>
 </td>
 
 </tr>
-
-<tr>
-
-<td align="center">
-<img src="images/booth3.jpg" width="100%">
-</td>
-
-</tr>
-
 </table>
 
 개발한 게임은 부산 **CO-SHOW** 행사에서 경기과학기술대학교 홍보 부스로 실제 운영되었습니다.
