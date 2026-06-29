@@ -60,7 +60,7 @@
 
 부스 기획안 전문은 아래 문서에서 확인할 수 있습니다.
 
-📄 [Booth Planning Document](./docs/booth_plan.docx)
+📄 [Booth Planning Document](./imeges/booth_plan.docx)
 
 ---
 
@@ -96,15 +96,11 @@
 - Prism.js를 활용한 Syntax Highlighting
 - 실제 디버깅 환경과 유사한 UI 구성
 
----
-
 ## 🎲 랜덤 스테이지
 
 - 총 5개의 Stage
 - 단계별 난이도 상승
 - 랜덤 문제 출제
-
----
 
 ## ❤️ 게임 시스템
 
@@ -112,8 +108,6 @@
 - 하트(생명) 시스템
 - 힌트 기능
 - 배경음악 및 효과음
-
----
 
 ## 📱 터치스크린 최적화
 
