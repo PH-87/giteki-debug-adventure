@@ -54,13 +54,11 @@
 
 까지 전 과정을 직접 수행하였습니다.
 
----
-
 ## 📝 Booth Planning
 
 부스 기획안 전문은 아래 문서에서 확인할 수 있습니다.
 
-📄 [Booth Planning Document](./imeges/booth_plan.docx)
+📄 [부스 기획안 보기](images/booth_plan.docx)
 
 ---
 
